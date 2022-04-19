@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryknoll Track & Field | Spartan Track Club Hawaii</title>
+    <link rel="stylesheet" href="CSS/maryknolltrack.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div class="container">
+        
+        <div id="nav-placeholder">
+
+        </div>
+
+
+        <div class="intro">
+            <div class="intro-container">
+                
+                <div class="intro-container-stuff">
+                    <div class="intro-text">We Are<br>Spartan Track.
+                        <p style="font-size: 30px;"><br>Hawaii's Premier Track & Field Club</p>
+                    </div>
+                   <a class="intro-button link-test" href="register.html">JOIN NOW</a> 
+                </div>
+                
+            </div>
+            
+            
+        </div>
+
+        <div id="footer-placeholder">
+
+        </div>
+
+     
+    </div>
+
+    <script>
+        var test = [document.getElementsByClassName('menu-item')];
+        var time = 0.5;
+        function time() { 
+            for(let i=0, len=test.length; i<len; i++) { 
+            test[i] = element.classList.add("transition-delay :" + time + "s");
+
+            }
+        }
+    </script>
+    <script>
+        (function () {
+  const header = document.querySelector('.header');
+	const icon = document.querySelector('.icon-container');
+	icon.onclick = function () {
+		header.classList.toggle('menu-open');
+	}
+}());
+    </script> 
+
+    
+<script>
+    $(function(){
+        $("#nav-placeholder").load("nav.html");
+    });
+</script>
+
+<script>
+    $(function(){
+        $("#footer-placeholder").load("footer.html");
+    });
+</script>
+
+
+<script>
+    $(document).ready(function() {
+$('.hover').on('touchstart touchend', function(e) {
+    e.preventDefault();
+    $(this).toggleClass('hover_effect');
+});
+});
+</script>
+</body>
+
+
+</html>

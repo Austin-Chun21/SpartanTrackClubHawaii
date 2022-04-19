@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | Spartan Track Club</title>
+    <link rel="stylesheet" href="CSS/register.css">
+    <link rel="icon" href="Images/spartantrackupdatedblackbg.png">
+    <!--Link the fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div class="container" ontouchstart>
+        <div id="nav-placeholder">
+
+        </div>
+        <div class="steps-container">
+            <div class="top-container">
+                <h3>How to Register</h3>
+                <h4>Follow the steps below to join the Spartan Track Club!</h4>
+            </div>
+    
+            <div class="steps">
+                <h6 class="top-text">USATF Membership is required to officially be a part of 
+                    Spartan Track Club Hawaii and to run in USATF sanctioned track meets. 
+                    Membership is good for one year and prices are as follows: 
+                    <ul class="text-ul">
+                        <li>18 Years and Younger: $25 per Calendar Year</li>
+                        <li>Adults: $40 per Calendar Year</li>
+                        <li>VIP Membership for Any Age: $150 per Calendar Year</li>
+                    </ul>
+                </h6>
+                <div class="step-one step">
+                    <h5 class="step-header">Step One: Register for USATF</h5>
+                    
+                    <p>
+                        <ul class="step-oneul">
+                            <li>
+                                Click the button to go to the USATF Website (open in new tab)
+                            </li>
+                            <div class="track-btn-cont">
+                                <a href="https://www.usatf.org/home/top-utility-nav-content/membership" class="track-btn" target="_blank">Go to USATF</a>
+                            </div>
+                            <li>
+                                Choose your desired plan, then click the JOIN button
+                            </li>
+                            <li>
+                                You will be brought to a form, so fill out your personal information. 
+                                When you reach the Club Info page, input your zip code and select “Spartan 
+                                Track Club Hawaii” or “39-0523” in the Club Affiliation section. Finish 
+                                the remainder of the form, then click to Check Out.
+                            </li>
+                            <li>
+                                You will be prompted to agree to the USATF rules, policies, 
+                                and agreements. Then you are able to pay for the membership. 
+                                That’s it, you are registered for Spartan Track Club Hawaii!
+                            </li>
+                        </ul>
+
+                    </p>
+                    <div class="usatflink">
+                        <a href="" class="usatfbutton"></a>
+                    </div>
+                    
+                   <!-- <br>Make sure to input the team code <strong>39-0523</strong> to be affiliated with the Spartan Track Club.
+                    </p> 
+                    <p>If you are a current member that needs to renew, you can look up your USATF membership number <a class="link" href="https://legacy.usatf.org/membership/help/number.asp">Here</a></p> -->
+    
+                </div>
+                <hr class="step-line" style="margin: 5%;">
+                <div class="step-two revealside step">
+                    <h5 class="step-header">Step Two: Register for Spartan Track Club</h5>
+                    <p>Please email Kyle Davis at spartantrackhi@gmail.com to join the team. You can also use our contact form <a class="link" href="contact.html">Here</a>
+                </div> <!--Would it be better to have an application or just an apply section on the contact form?-->
+    
+            </div>
+            
+            
+        </div>
+
+        <div id="footer-placeholder">
+
+        </div>
+
+    
+</div>
+
+<!-- JQuery to make the new navbar and footer visible -->
+<script>
+    $(function(){
+        $("#nav-placeholder").load("navgreen.html");
+    });
+</script>
+
+<script>
+    $(function(){
+        $("#footer-placeholder").load("footer.html");
+    });
+</script>
+
+    <script>
+        $(document).ready(function() {
+    $('.hover').on('touchstart touchend', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('hover_effect');
+    });
+});
+    </script>
+
+    <!--JS for the fade in effect, see scrolltest.html-->
+<script>
+    function reveal() { 
+        //Select all the elements with the reveal class
+        var reveals = document.querySelectorAll(".revealside");
+        //For loop - If .reveals element is within the window,
+        //make it visble. Otherwise remove the .active
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 30; 
+            if (elementTop < windowHeight - elementVisible) {
+                //Had to make it active2 because of the .active in the navbar 
+                //It kept changing the text green on hover 
+            reveals[i].classList.add("active2");
+            }
+            else { 
+                reveals[i].classList.remove("active2");
+            }
+        } 
+    }
+     //Add EventListener to trigger the reveal() on scroll
+     window.addEventListener("scroll", reveal);
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Spartan Track Club</title>
+    <link rel="stylesheet" href="CSS/contact.css">
+    <link rel="icon" href="Images/spartantrackupdatedblackbg.png">
+  <!--Link the fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div class="container" ontouchstart>
+        <div id="nav-placeholder">
+
+        </div>
+    
+<!--
+        <div class="contact-text contact-container">
+            
+            <div class="form-container">
+                <form action="" autocomplete="off" method="POST" name="hello-sheet">
+                    <fieldset>
+                        <div class="top-text">
+                            <h3>Contact Us</h3>
+                        <p>Please use the form below to get in touch with us.
+                        </p>
+                        </div>
+                        <h4>Name</h4>
+                        <p><input required autocomplete="off" type="text" placeholder="Bob Joe"></p>
+                        <h4>Email Address</h4>
+                        <p><input required type="text" placeholder="name@mail.com"></p>
+                        <h4>Phone Number</h4>
+                        <p><input required type="text" placeholder="(808) 000-1111"></p>
+                        <h4>Subject</h4>
+                        <p><input required type="text" placeholder="Inquiry"></p>
+                        <h4>Message</h4>
+                        <textarea name="message" id="message" class="message-box" cols="30" rows="10" placeholder="   Enter a message here"></textarea>
+
+                        <div class="submit-container">
+                            <button type="submit" name="submit" value="Send message" id="submit-button" class="submit-btn" onclick="success()">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+
+            
+        </div> -->
+        <div class="form-container">
+            <div class="form">
+                <form action="POST">
+                    <div class="top-text">
+                        <h3>Contact Us</h3>
+                    <p class="subtext">Please use the form below to get in touch with us.
+                    </p>
+                    </div>
+                    <h4>Name</h4>
+                    <p><input required autocomplete="off" type="text" placeholder="Enter Name"></p>
+                    <h4>Email Address</h4>
+                    <p><input required type="text" placeholder="name@mail.com"></p>
+                    <h4>Phone Number</h4>
+                    <p><input required type="text" placeholder="(808) 000-1111"></p>
+                    <h4>Subject</h4>
+                    <p><input required type="text" placeholder="Inquiry"></p>
+                    <h4>Message</h4>
+                    <textarea name="message" id="message" class="message-box" cols="30" rows="10" placeholder="Enter a message here"></textarea>
+
+                    <div class="submit-container">
+                        <button type="submit" name="submit" value="Send message" id="submit-button" class="submit-btn" onclick="success()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+            <div id="footer-placeholder">
+
+            </div>
+
+    
+    </div>
+
+
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwhife48bhGAAu1lrhJGIStQ-BrHVT45KpIGTfuKi8PmG7EIrA/exec'
+        const form = document.forms['spartan-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => window.location.href="index.html")
+            .catch(error => console.error('Error!', error.message))
+        })
+</script>
+  
+
+<script>
+    $(function(){
+        $("#nav-placeholder").load("navgreen.html");
+    });
+</script>
+
+<script>
+    $(function(){
+        $("#footer-placeholder").load("footer.html");
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+$('.hover').on('touchstart touchend', function(e) {
+    e.preventDefault();
+    $(this).toggleClass('hover_effect');
+});
+});
+</script>
+</body>
+</html>

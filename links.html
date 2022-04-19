@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Links | Spartan Track Club</title>
+    <link rel="stylesheet" href="CSS/links.css">
+    <link rel="icon" href="Images/spartantrackupdatedblackbg.png">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+        <!--Link the fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div class="container" ontouchstart>
+      <div id="nav-placeholder">
+
+
+      </div>
+
+        <div class="quick-links">
+            <h3>Links</h3>
+            <div class="quick-link-grid">
+                <div class="quick-link" onclick="redirect(0)">
+                    
+                    <img src="Images/usatflogo.png" alt="" class="logo">
+                    <h4>USATF Hawaii</h4>
+                    
+                    <p>National organization that hosts sanctioned meets throughout the islands.</p>
+                    <div class="go-btn-cont">
+                        <a href="hawaii.usatf.org" class="go-btn">Go Now</a>
+                    </div>
+            
+                </div>
+
+                <div class="quick-link" onclick="redirect(1)">
+                    
+                    <img src="Images/trackbarngray.png" alt="" class="logo">
+                    <h4>TrackBarn - Official<br>Merchandise Site</h4>
+                    
+                    <p>Get your uniform and other official Spartan Track Club merch here!</p>
+                    <div class="go-btn-cont">
+                        <a href="https://trackbarn.com/pages/spartan-tc-team-store" class="go-btn">Go Now</a>
+                    </div>
+            
+            </div>
+
+                <div class="quick-link" onclick="redirect(2)">
+                    <img src="Images/calendar.png" alt="" class="logo">
+                    <h4>Event Calendar</h4>
+                    
+                    <p>View upcoming USATF sanctioned meets.</p>
+                    <div class="go-btn-cont">
+                        <a class="go-btn" href="https://legacy.usatf.org/calendars/searchResults.asp?city=&state=&country=&associationNumber=39&sta
+                        rtDate=&endDate=&eventType=&includeAllAges=ON&distanceSelection=other&distance=&distanceUnits=&distanceComparison=%3D&prizePurse=&name=&series=&submit=Search">Go Now</a>
+                    </div>
+                </div>
+
+                <div class="quick-link athcon" onclick="redirect(3)">
+                    <img src="Images/athleticnetlogosquare.jpg.png" alt="" class="logo athleticnetlogo">
+                    <h4>Athletic Net</h4>
+                    <p>View meet results and running statistics here. Sign up for a 
+                        free account for full access to times and records. 
+                    </p>
+                    <div class="go-btn-cont">
+                        <a class="go-btn" href="https://www.athletic.net/">Go Now</a>
+                    </div>
+                </div>
+
+                <div class="quick-link" onclick="redirect(4)">
+                    <img src="Images/torchrecruitinglogo.jpg" class="logo" alt="">
+                    <h4>Torch College Recruiting</h4>
+                    
+                    <p>Want to run track or cross country in college? Torch College Recruiting offers a free, simple recruiting 
+                        process for aspiring collegiate athletes. Make yourself a FREE recruiting profile here to connect with coaches.</p>
+                    <div class="go-btn-cont">
+                        <a class="go-btn" href="https://torchcollegerecruiting.com/">Go Now</a>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div> 
+  
+      
+
+        <div id="footer-placeholder">
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+
+        function myFunction() {
+            var navbar = document.getElementById('nav')
+            var header = document.getElementById('header')
+            navbar.classList.toggle('show')
+            header.classList.toggle('showe')
+        }
+    
+    </script>
+
+    <script type="text/javascript">
+        function redirect(numberz) { 
+            if(numberz == 0) {
+                window.open("https://hawaii.usatf.org", "_blank")
+            }
+            else if(numberz == 1) { 
+                window.open("https://trackbarn.com/pages/spartan-tc-team-store", "_blank")
+            }
+            else if(numberz == 2) { 
+                window.open("https://legacy.usatf.org/calendars/searchResults.asp?city=&state=&country=&associationNumber=39&startDate=&endDate=&eventType=&includeAllAges=ON&distanceSelection=other&distance=&distanceUnits=&distanceComparison=%3D&prizePurse=&name=&series=&submit=Search", "_blank")
+            }
+            else if(numberz == 3) { 
+                window.open("https://www.athletic.net/", "_blank")
+            }
+            else { 
+                window.open("https://www.ncsasports.org/", "_blank")
+            }
+            
+        }
+    </script>
+   <script>
+    $(function(){
+        $("#nav-placeholder").load("navgreen.html");
+    });
+</script>
+
+<script>
+    $(function(){
+        $("#footer-placeholder").load("footer.html");
+    });
+</script>
+</body>
+</html>
