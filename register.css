@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'tradegothicbold';
+    src: url('/Fonts/Trade\ Gothic\ LT\ Bold\ Condensed\ No.\ 20.ttf.ttf');
+    src: url('/Fonts/TradeGothicLTBoldCondNo20.woff') format('woff2'),
+         url('/Fonts/TradeGothicLTBoldCondNo20.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+} 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+@keyframes slideUp {
+    0% { 
+        transform: translateY(80%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+   
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'oswald';
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+.top-container, .steps{
+    animation: slideUp ease-out 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.top-container {
+    text-align: center;
+    padding-top: 150px;
+}
+.top-container h3 { 
+    font-size: 60px;
+    font-weight: 500;
+}
+.top-container h4 { 
+    font-size: 38px;
+    margin-bottom: 40px;
+}
+.steps {
+    text-align: center;
+}
+.step-header { 
+    margin: 0 10% 1% 10%; 
+    text-align: center;
+    font-size: 30px;
+    color: #FDC841;
+    font-weight: 500;
+}
+strong { 
+    font-family: 'oswald';
+    color: #FDC841;
+}
+.step p {
+    font-family: 'oswald';
+    line-height: 30px;
+    text-align: left;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: 300;
+}
+.link {
+    color: #FDC841;
+    font-family: 'oswald';
+}
+.link:hover { 
+    color: #731D34;
+}
+.step p { 
+    font-size: 22px;
+}
+.top-text { 
+    font-size: 24px;
+    padding: 0 8%;
+    text-align: center;
+}
+
+ul { 
+    padding: 0 5%;
+}
+.track-btn-cont { 
+    width: 100%;
+    margin: 50px 0;
+}
+.track-btn {
+    width: 100%;
+    padding: 20px 50px;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    background-color: #FDC841;
+    margin: 50px auto;
+    transition: 0.5s;
+}
+.track-btn:hover { 
+    background-color: #0a5721;
+    transition: 0.5s;
+}
+.text-ul {
+    font-size: 20px;
+    list-style-type: none;
+    margin-top: 20px;
+}
+.step-oneul { 
+    list-style-type: none;
+    font-size: 20px;
+    margin: 0 10%;
+    line-height: 50px;
+}
+.step-one {
+    margin: 5%;
+    padding: 5% 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.step-two { 
+    margin: 5% 5% 0 5%;
+    padding: 5% 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.steps-container { 
+    color: white;
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba( 0, 0, 0.3)), url(/Images/tessarunning.png); */
+    background-image: linear-gradient(rgba(15, 14, 14, 0.411), rgba(17, 17, 17, 0.418)), url(/Images/20210727_180136.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 100px;
+} 
+.link-button {
+    text-align: center;
+    background-color: #FDC841;
+    color: white;
+    text-decoration: none;
+    padding: 2% 1%;
+}
+p { 
+    font-family: 'Roboto Condensed';
+}
+
+/* Stuff for fade in */
+.revealside{
+    position: relative;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .revealside.active2{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+
+@media (max-width: 500px) {
+    .steps-container { 
+        background-position: center center;
+    }
+    h3 { 
+        font-size: 55px;
+    }
+    .top-container { 
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: -20px;
+    }
+}
+@media (max-width: 991px) { 
+ 
+    .steps-container { 
+        background-attachment: scroll;
+        background-position: center center;
+        background-repeat: no-repeat;
+        text-align:center;
+        padding-bottom: 50px;
+    }
+    .top-container { 
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: -20px;
+    }
+    .top-container h3 {
+        font-size: 44px;
+    }
+    .top-container h4 {
+        font-size: 24px;
+    }
+}
+
+@media(min-width: 992px) { 
+   
+    .step-line { 
+        display: none;
+    }
+}

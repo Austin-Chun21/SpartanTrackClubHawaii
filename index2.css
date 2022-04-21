@@ -1,0 +1,1080 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+      transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      transform: translate3d(0,0,0);
+    }
+  
+    40% {
+      transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+      transform: translate3d(0, -6px, 0);
+    }
+  
+    70% {
+      transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+      transform: translate3d(0, -4px, 0);
+    }
+  
+    90% {
+      transform: translate3d(0,-2px,0);
+    }
+
+}
+@keyframes moveUp {
+    0% { 
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+   
+}
+html { 
+    font-size: 16px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'oswald';
+    font-weight: 400;
+    box-sizing: border-box;
+}
+/* New navbar code  (Includes stuff in media queries */ 
+.spartanheaderlogo img { 
+    width: 250px;
+}
+.header { 
+    background-color: #731D34;
+    
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.733) 0px 0px 50px;
+}
+.navbar { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.hamburger { 
+    display: none;
+    cursor: pointer;
+}
+.bar { 
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+    transition: 0.3s ease-out;
+}
+.nav-menu { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav-menu-item {
+    list-style: none;
+    margin-left: 2rem;
+}
+.nav-menu-item a { 
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+/* End new navbar code */
+
+.intro-container { 
+    background-color: white;
+    position: relative;
+    top: 74px;
+    width: 100%;
+    height: 90vh;
+    z-index: 99;
+    color: white;
+    text-align: center;
+}
+
+.title-container h3 { 
+    font-size: 3.5rem;
+    font-weight: 500;
+    position: relative;
+    top: 15vh;
+}
+.title-container p { 
+    font-size: 2rem;
+    position: relative;
+    top: 20vh;
+}
+.learn-more-button { 
+    position: relative;
+    top: 28vh;
+    background-color: #D3A04C;
+    padding: 2% 20%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.learn-more-button:hover { 
+    background-color: #c5903a;
+    transition: 0.5s;
+}
+.intro-container-bg {
+    width: 100%;
+    height: 100%;
+    background-image: url("/Images/matthewjumpingmaroon.png");
+    background-size: cover;
+    background-position: center center;
+
+}
+.title-container, .button-container { 
+    animation: moveUp 1s;
+}
+.group-picture { 
+    width: 40vw;
+    padding: 20px;
+}
+.join-container { 
+    padding: 10% 10%  10%;
+    background-color: #D3A04C;
+    display: flex;
+}
+.text-container { 
+    padding: 8% 0 0 4%;
+}
+.text-container p { 
+    font-size: 18px;
+    margin: 20px 0;
+    color: white;
+}
+.text-container h3 { 
+    text-align: center;
+    color: white;
+    font-size: 32px;
+}
+.about-button { 
+    width: 50%;
+    border: 2px solid white;
+    padding: 10px 50px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.5s;
+}
+.about-button:hover { 
+    background-color: white;
+    color: #D3A04C;
+    transition: 0.5s;
+}
+.about-button-container { 
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+.register-container { 
+    z-index: 9;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+.coaches { 
+    background-color: #731D34;
+    color: white;
+    font-size: 3em;
+    padding-top: 15px;
+    text-align: center;
+}
+.coaches-grid-container { 
+    display: grid;
+    margin: 0;
+    padding: 0;
+}
+/* Somehow connected to the other file...about.css
+.coach { 
+    background-color: #731D34;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    overflow: hidden;
+}
+*/
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    opacity: 0;
+    background-color: #731D34;
+    transition: 0.5s;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px auto;
+}
+.coach-text { 
+    position: inherit;
+    top: 50px;
+    color: white;
+    box-sizing: border-box;
+    width: 100%;
+}
+.coach-pic { 
+    margin: 20px auto;
+    width: 100%;
+    transition: transform 0.5s;
+}
+.coach:hover img {
+    /* Maybe don't transform 
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+     -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+         transform: scale(1.1); */ 
+    transition: 0.5s;
+    overflow: hidden;
+}
+.coach:hover .overlay {
+    opacity: 0.8;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.read-more-button { 
+    position: relative;
+    padding: 10px 20vw;
+    top: 50%;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    background-color: #D3A04C;
+    opacity: 1;
+}
+.read-more-button:hover { 
+    background-color: #f0a122;
+    opacity: 1;
+    transition: 0.3s;
+}
+/* Register Container */
+.register-container { 
+    background-color: #141414;
+    color: white;
+    text-align: center;
+    padding: 10% 0% 0% 0%;
+    z-index: 0;
+    
+}
+.register-text-container { 
+    text-align: center;
+    position: relative;
+    height: 300px;
+}
+.register-text-container h3 {
+    font-size: 50px;
+    font-weight: 500;
+}
+.register-text-container p { 
+    font-size: 30px;
+
+}
+.islands-container { 
+    position: relative;
+    z-index: -1;
+}
+.islands { 
+    z-index: 1;
+    float: right;
+    width: 200px;
+    margin-top: -25%;
+    margin-right: 0px;
+}
+.register-button { 
+    text-align: center;
+    z-index: 99;;
+    text-decoration: none;
+    width: 50%;
+    display: inline-block;
+    color: #fff;
+    background-color: #731D34;
+    border-radius: 0em;
+    padding: 1.5%;
+    text-decoration: none;
+    font-size: 20px;
+    transform: translateY(50px); 
+    transition: 0.5s;
+}
+.register-button:hover { 
+    background-color: #c5903a;
+}
+
+.news { 
+    padding: 210px 0;
+
+}
+.news h3 { 
+    text-align: center;
+    font-size: 65px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.news-grid { 
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 2% 0 6% 0;
+}
+.sm-container { 
+    max-width: 400px;
+    flex: 1 0 100px;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0 auto;
+
+
+}
+.instagram-media { 
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.tweet { 
+    margin-top: -43vh;
+}
+
+.contact-container { 
+    width: 100%;
+    height: 50vh;
+    padding: 20% 0;
+
+    background-image: linear-gradient(rgba(10, 10, 10, 0.795), rgba(29, 29, 29, 0.336)), url("/Images/stchawaiigroupphoto4.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.contact-container-text { 
+    margin-top: -15vh;
+    text-align: center;
+    color: white;
+    filter: brightness(1);
+}
+.contact-container-text h2 { 
+    font-weight: 500;
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+.contact-container-text p { 
+    font-size: 25px;
+}
+.contact-button-container { 
+    text-align: center;
+    width: 100%;
+}
+.contact-button {  
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 20%;
+    position: relative;
+    top: 50px;
+    padding: 10px 0;
+    font-size: 25px;
+    border: 1px white solid;
+    transition: 0.7s;
+    /* Styles for button hover, uses background size to fill the empty div
+    background: linear-gradient(to right, #D3A04C, #D3A04C);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s 0s; */
+}
+.contact-button:hover {
+    background-color: #D3A04C;
+    transition: 0.5s; 
+    box-shadow: #d39f4cc2 0px 0px 28px 0px;
+    /* 
+     background-size: 100% 100%; */
+}
+.d { 
+    height: 50vh;
+}
+
+/* Code for footer - Uses grid to shape layout*/
+.footer { 
+    background-color: #141414;
+    color: white;
+    text-align: center;
+    margin-bottom: -10px;
+    padding-bottom: 3%;
+    margin-top: -20px;
+}
+.footer-spartan { 
+    width: 55%;
+    margin-top: 25px;
+}
+.footer a { 
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.5s;
+}
+.street { 
+    font-size: 20px;
+}
+
+.footer,.footer-grid,.foot-grid,.footer-element { 
+    position: relative;
+}
+
+
+.link-container {
+    margin-bottom: 15px;
+}
+.footer-link:hover {
+    color: #cfa435;
+    transition: 0.5s;
+    text-shadow: 0px 0px 30px #d39b0ce0;
+}
+.social-media { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    padding: 40px 20%;
+}     
+
+
+.smButton { 
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background: #2f3033dc;
+    border-radius: 50px;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 2em;
+    text-align: center;
+    transition: 0.5s;
+}
+/* Move the logo and address down a little bit */
+.logo-info { 
+    margin-top: 20px;
+}
+/* Add the social media logos */
+.instagram::before { 
+    font-family: "FontAwesome";
+    content: "\f16d";
+    position: relative;
+    top: -2px;
+}
+.twitter::before { 
+    font-family: "FontAwesome";
+    position: relative;
+    top: -2px;
+    content: "\f099";
+}
+.youtube::before { 
+    font-family: "FontAwesome";
+    position: relative;
+    top: -2px;
+    content: "\f16a";
+    
+}
+.instagram:hover { 
+   /*background-color: #963396; */
+   background-color: #731D34;
+   animation: bounce 1s;
+}
+.twitter:hover { 
+    /* background-color: #00b0ed; */
+    background-color: rgb(87, 87, 87);
+    animation: bounce 1s;
+}
+.youtube:hover { 
+    /* background-color: #cc2127; */
+    background-color: #D3A04C;
+    animation: bounce 1s;
+}
+/* End footer Code */
+
+/* New news grid code since Instagram post height got messed up */
+.test-news { 
+    padding: 50px 0;
+}
+.test-grid { 
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+
+}
+.test-news h3 { 
+    font-size: 65px;
+    font-weight: 500;
+    text-align: center;
+}
+.content { 
+    margin: 20px auto;
+    max-width: 400px;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 500px) {
+
+    .navbar { 
+        position: relative;
+    }
+
+    .nav-menu { 
+        position: fixed;
+        top: 4.74rem;
+        /* Can change the direction of menu sliding out, just change left */
+        right: -100%;
+        flex-direction: column;
+        background-color: #731D34;
+        padding: 5vh 0;
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        text-align: center;
+        transition: 1s;
+        height: 70vh;
+        z-index: 999;
+        border-top: 2px solid white;
+        
+    }
+    .nav-menu-item { 
+        line-height: 2;
+        transition: 0.5s;
+        width: 80%;
+        margin-right: 2rem;
+        z-index: 999;
+    }
+    /* Need to fix a tag filling entire box instead of just the text */
+    .nav-menu-item a { 
+        padding: 0;
+    }
+    .nav-menu.active { 
+        position: fixed;
+        opacity: 1;
+        right: 0;
+        transition: 1s;
+    }
+
+    /* Like how this displays but the a tag 
+    Update: fixed it with onclick function and cursor:pointer*/
+    .nav-menu-item:hover { 
+        background: #D3A04C;
+        width: 80%;
+        transition: 0.5s; 
+        padding: 10px 0;
+        cursor: pointer;
+    }
+    .nav-menu-item.active-link:hover {
+        color: white;
+        background-color: #D3A04C;
+    }
+    .nav-menu-item a.active-link { 
+        color: #D3A04C;
+    }
+    .nav-menu-item a.active-link:hover { 
+        color: white;
+    }
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(1) { 
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) { 
+        opacity: 0;
+        transition: 0.4s;
+    }
+    .hamburger.active .bar:nth-child(3) { 
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /* End new navbar code */
+
+    .intro-container { 
+        top: 70px;
+    }
+    .coach-text p { 
+        font-size: 1.5rem; 
+        margin: 0 40px;
+    }
+    
+    .news-grid {
+       
+    }
+    .news { 
+        padding: 50px 0;
+    }
+    .sm-container { 
+        width: 50%;
+        margin: 0;
+    }
+    
+    .join-container { 
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .group-picture-container { 
+        margin: 15vh 0 0 0;
+    }
+    .group-picture { 
+        width: 90%;
+        padding: 0;
+    }
+    .text-container { 
+        color:#fff;
+        text-align: left;
+        padding: 5%;
+        letter-spacing: normal;
+    }
+    .text-container h3 { 
+        font-weight: 500;
+        font-size: 34px;
+        
+    }
+    .about-button-container { 
+        margin-top: 40px;
+    }
+    .islands { 
+        margin-top: -21vh;
+    }
+    .register-button {
+        width: 60%;
+        padding: 10px 0;
+    }
+    .contact-container { 
+        background: linear-gradient(rgba(248, 159, 26, 0.863), rgba(175, 11, 52, 0.952));
+        padding: 160px 0 120px 0;
+
+    }
+    .contact-container-text { 
+        padding: 0 22px;
+    }
+    .contact-container-text h2 { 
+        font-size: 35px;
+        margin-top: 50px;
+    }
+    .contact-button { 
+        width: 80%;
+    }
+    .contact-button:hover { 
+        background-color: white;
+        color: rgb(105, 105, 103);
+    }
+    .sm-svg { 
+        margin: 20px -10px;
+    }
+    .footer { 
+        margin-top: -20px;
+        padding: 20px 0;
+    }
+    .footer-element { 
+        line-height: 2em;
+    }
+    .footer-spartan { 
+        width: 270px;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 991px) { 
+    .navbar { 
+        position: relative;
+    }
+
+    .nav-menu { 
+        position: fixed;
+        top: 4.7rem;
+        /* Can change the direction of menu sliding out, just change left */
+        right: -100%;
+        flex-direction: column;
+        background-color: #731D34;
+        padding: 5vh 0;
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        text-align: center;
+        transition: 1s;
+        height: 70vh;
+        z-index: 999;
+        border-top: 2px solid white;
+        
+    }
+    .nav-menu-item { 
+        line-height: 2;
+        transition: 0.5s;
+        width: 80%;
+        margin-right: 2rem;
+        z-index: 999;
+    }
+    /* Need to fix a tag filling entire box instead of just the text */
+    .nav-menu-item a { 
+        padding: 0;
+    }
+    .nav-menu.active { 
+        position: fixed;
+        opacity: 1;
+        right: 0;
+        transition: 1s;
+    }
+
+    /* Like how this displays but the a tag 
+    Update: fixed it with onclick function and cursor:pointer*/
+    .nav-menu-item:hover { 
+        background: #D3A04C;
+        width: 80%;
+        transition: 0.5s; 
+        padding: 10px 0;
+        cursor: pointer;
+    }
+    .nav-menu-item.active-link:hover {
+        color: white;
+        background-color: #D3A04C;
+    }
+    .nav-menu-item a.active-link { 
+        color: #D3A04C;
+    }
+    .nav-menu-item a.active-link:hover { 
+        color: white;
+    }
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(1) { 
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) { 
+        opacity: 0;
+        transition: 0.4s;
+    }
+    .hamburger.active .bar:nth-child(3) { 
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /* End new navbar code */
+
+    /* Fix alignment and positioning for the top div */
+    .intro-container { 
+        top: 70px;
+    }
+    /* Add space between the social media posts */
+    .sm-container { 
+        margin: 120px 0;
+    }
+
+    /* Adjust font size and placement for the coach grid */
+    .coach-text p { 
+        font-size: 1.5rem; 
+        margin: 0 40px;
+    }
+    .coach-pic {
+        width: 110%;
+        overflow: hidden;
+    }
+    .coaches-grid-container {
+        padding: 0;
+        grid-gap: 0;
+    }
+    .coaches-grid-container { 
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .overlay { 
+        background-color: red;
+    }
+    .news { 
+        padding: 40px 0;
+    }
+    .news-grid {
+
+        
+    }
+    .sm-container { 
+        width: 100%;
+        margin: 40px 0;
+        box-shadow: rgba(81, 81, 134, 0.2) 0px 7px 20px 0px;
+    }
+    
+    .join-container { 
+        display: flex;
+        flex-direction: column;
+    }
+    .group-picture-container { 
+        margin: 15vh 0 0 0;
+        text-align: center;
+    }
+    .group-picture { 
+        width: 90%;
+        max-width: 600px;
+        padding: 0;
+    }
+    .text-container { 
+        color:#fff;
+        text-align: left;
+        padding: 5%;
+        letter-spacing: normal;
+    }
+    .text-container h3 { 
+        font-weight: 500;
+        font-size: 34px;
+    }
+    .about-button-container { 
+        margin-top: 6vh;
+    }
+    .contact-container { 
+        background: linear-gradient(rgba(248, 159, 26, 0.863), rgba(175, 11, 52, 0.952));
+        padding: 220px 0;
+    }
+    .contact-container-text h2 { 
+        font-size: 40px;
+        margin-top: 0;
+    }
+    .contact-button { 
+        width: 80%;
+    }
+    .contact-button:hover { 
+        background-color: white;
+        color: rgb(105, 105, 103);
+    }
+    .social-media {
+        padding: 40px 22%;
+    }
+    .smButton {
+        width: 65px;
+        height: 65px;
+        font-size: 30px;
+    }
+    .smButton::before { 
+        position: relative;
+        top: 0px;
+    }
+    .footer-element {
+        line-height: 2em;
+    }
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+    /* New navbar code, change to line of links for desktop */
+    header { 
+        position: relative;
+    }
+    .active:hover { 
+        color: white;
+    }
+    .nav-menu-item a { 
+        transition: 0.5s;
+    }
+    .nav-menu-item a:hover { 
+        color: #D3A04C;
+        transition: 0.5s; 
+    }
+    .nav-menu-item a.active-link { 
+        color: #D3A04C;
+    }
+    /* End navbar media query */
+
+    .intro-container { 
+        margin-top: 0px;
+        height: 80vh;
+    }
+
+    /* Join Container code*/
+
+    /* Fix margins to align picture better*/
+    .group-picture-container { 
+        margin-top: 40px;
+    }
+
+    .news { 
+        padding: 30px 0;
+    }
+    .news-grid { 
+  
+    }
+    .sm-container { 
+        width: auto;
+        margin: auto;
+    }
+
+    .sm-container:last-child:nth-child(2n - 1) {
+        grid-column: span 2;
+        padding: 30px 0;
+    }
+    .coaches-grid-container { 
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .coach-text { 
+        padding: 0 30px;
+    }
+    .coach-text h5 { 
+        font-size: 2rem;
+    }
+    .coach-text h6 {
+        font-size: 1.5rem;
+    }
+    .coach-text p {
+        font-size: 1.2rem;
+    }
+    .read-more-button { 
+        top: 60%;
+        padding: 5px 30%;
+    }
+    
+    .about-button-container { 
+        margin-top: 40px;
+    }
+
+
+    /* Adjustments for footer desktop */
+    .footer-grid { 
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding-top: 30px;
+        
+    }
+    .link-grid { 
+        margin-top: 10%;
+    }
+    .foot-grid { 
+        margin-right: 10%;
+        margin-left: 6%;
+    }
+    .footer-spartan { 
+        width: 250px;
+    }
+    .social-media {
+        margin-top: 15%;
+        width: 100%;
+        padding: 0;
+    }
+    .test-grid { 
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+@media only screen and (min-width: 1201px) { 
+    /* New navbar code, change to line of links for desktop */
+    header { 
+        position: relative;
+    }
+    .active:hover { 
+        color: white;
+    }
+    .nav-menu-item a { 
+        transition: 0.5s;
+    }
+    .nav-menu-item a:hover { 
+        color: #D3A04C;
+        transition: 0.5s; 
+    }
+    .nav-menu-item a.active-link { 
+        color: #D3A04C;
+    }
+    /* End navbar media query */
+    .learn-more-button { 
+        padding: 20px 150px;
+        font-size: 1.5rem;
+    }
+    .intro-container { 
+        margin-top: 0px;
+        height: 80vh;
+    }
+
+    /*Join container media query info */
+    /* Make text size larger */ 
+    .text-container p { 
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    /* Register container */
+    .register-text-container { 
+        margin-top: -30px;
+    }
+    .register-container { 
+        padding: 10% 0 5% 0;
+    }
+    .register-button { 
+        font-size: 22px;
+        padding: 1%;
+        width: 45%;
+    }
+    .islands { 
+        width: 300px;
+        margin: -18% 5% 0 0;
+    }
+
+    .news { 
+        padding: 30px 0;
+    }
+    .news-grid { 
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: 0;
+        padding: 0;
+    }
+    .sm-container { 
+        margin: 0 auto;
+        vertical-align: top;
+        text-align: center;
+        width: 360px;
+    }
+    .coaches-grid-container { 
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .coach-text { 
+        padding: 0 30px;
+    }
+    .coach-text h5 { 
+        font-size: 2rem;
+    }
+    .coach-text h6 {
+        font-size: 1.5rem;
+    }
+    .coach-text p {
+        font-size: 1.2rem;
+    }
+    .read-more-button { 
+        top: 60%;
+        padding: 5px 30%;
+    }
+
+    /* Adjustments for footer desktop */
+    .footer-grid { 
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding-top: 30px;
+        
+    }
+    .link-grid { 
+        margin-top: 10%;
+    }
+    .foot-grid { 
+        margin-right: 10%;
+        margin-left: 6%;
+    }
+    .footer-spartan { 
+        width: 250px;
+    }
+    .social-media {
+        margin-top: 15%;
+        width: 100%;
+        padding: 0;
+    }
+    .test-grid { 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

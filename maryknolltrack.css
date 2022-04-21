@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'tradegothicbold';
+    src: url('/Fonts/Trade\ Gothic\ LT\ Bold\ Condensed\ No.\ 20.ttf.ttf');
+    src: url('/Fonts/TradeGothicLTBoldCondNo20.woff') format('woff2'),
+         url('/Fonts/TradeGothicLTBoldCondNo20.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+} /* TradeGothic LT Condensed Eighteen (Bold) */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'tradegothicbold';
+}
+
+
+/* Intro Container Code */
+/* Code for the top container */
+.bg { 
+    width: 90%;
+    margin-top: -1%;
+}
+.intro-container { 
+    background-image: url(/Images/matthewjumpingmaroon.png);
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+	padding-top: 150px;
+  /*  position: fixed;
+    z-index: -10; */
+
+
+}
+.intro-container-stuff { 
+    text-align: center;
+}
+
+.intro-text {
+   /*font-size: 45px;
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    text-align: center;
+    color: white;
+    padding-top: 5%;
+    
+}
+
+.intro-button { 
+
+    text-align: center;
+    width: calc(100% - 2em);
+    display: block;
+    color: #fff;
+    border-radius: 40em;
+    padding: 1%;
+    background-color: #FDC841;
+    text-decoration: none;
+    margin: 3% auto 7%;
+    position: absolute;
+    left: 50%;
+    
+    z-index: 1;
+    cursor: pointer;
+    font-size: 1.5em; 
+    transform: translate(-50%, -270%) translateY(50vh);
+}
+
+.intro-button:hover { 
+    background-color: #D3A04C;
+    transition: 0.5s;
+}
+hr { 
+	position: relative;
+	margin: 0 20px;
+	top: 5px;
+	
+	visibility: hidden;
+}
+.menu-open hr { 
+	visibility: visible;
+	transition: 1.5s;
+}
